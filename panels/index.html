@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+		<title>HTML5 Responsive Full Screen: Panel</title>
+        <script>EBModulesToLoad = ['Video', 'EBCMD'];</script>
+        <script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script>
+        <script type="text/javascript" src="scripts/politeLoad.js"></script>
+	</head>
+    <body>
+        <div id="hiddenContainer"></div>        <!-- Container to load and cache images that need to change on the fly -->
+
+        <div id="container">
+            <div id="panel" class="hidden">
+                <div id="background" class="threeD"></div>     <!-- Stage background - just a plain colour or gradient -->
+                <div id="panelContainer" class="threeD">
+                    <div id="panelCreative" class="threeD">
+											<div id="initialBackground" class="threeD"></div>
+											<div id="barometer" class="threeD"></div>
+											<div id="preBackground" class="threeD"></div>
+											<div id="preBackgroundClouds" class="threeD"></div>
+											<div id="frame2heading" class="threeD"></div>
+                        <div id="unitBackground" class="threeD"></div>
+                        <!--
+                            Divs use the threeD class that makes sure they preserve their 3D properties along the z-axis
+                            when scaling to avoid imager flickering
+                        -->
+                        <div id="logo"></div>
+                        <div id="t1"></div>
+                        <div id="t2"></div>
+												<div id="legal"></div>
+												<!--
+                        <div id="t3"></div>
+                        <div id="copy2"></div>
+
+                        <div id="tap"></div>
+											-->
+
+
+												<!--
+                        <div id="videoHolder"> -->
+
+                            <!---------------------------------------------------------->
+                            <!---------------------------------------------------------->
+                            <!-- Video unit - keep this div as a group and don't edit -->
+                          <!--  <div id="videoUnit" class="threeD">
+                                <video id="video"></video>
+                                <div id="unmuteButton" class="threeD"></div>
+                                <div id="videoEndFrame" class="threeD"></div>
+                                <div id="videoReplayButton" class="threeD"></div>
+                            </div>
+                            <!---------------------------------------------------------->
+                            <!---------------------------------------------------------->
+                        </div>
+
+                        <!--<div id="clickButton"></div>-->
+                        <div id="cta"></div>
+												<div id="closeButton" class="threeD"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript">
+            function initEB() { (!EB.isInitialized()) ? EB.addEventListener(EBG.EventName.EB_INITIALIZED, politeInit) : politeInit(); }
+
+            //now you can just feed stuff into that one function and give it a callback...
+            function politeInit() {
+                politeLoad([
+							//"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js",
+                            //"https://secure-ds.serving-sys.com/BurstingcachedScripts/libraries/modernizr/2_8_3/modernizr.min.js",
+                            //"https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js",
+
+                            "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js",
+                            "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js",
+                            "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js",
+
+
+                            // Sizmek scripts - leave in
+                            "../styles/reset.css",
+                            "../scripts/utils.js",
+                            "scripts/script.js",
+
+
+                            "styles/style.css",
+                            //"styles/video.css",
+
+                            "scripts/fit.min.js",
+                            "scripts/vars.js",
+                            //"scripts/videoUnit.js",
+                            "scripts/tracking.js",
+                            "scripts/expand.js",
+
+							{url:"images/close.png", div:"closeButton"}
+							],
+
+							function() {
+                                console.log(":: LOADER - all initial loads complete ::");
+                                divCheck();
+                           });
+            }
+
+            console.log(":: HIT TEMPLATE V2 ::");
+            window.addEventListener("load", initEB);
+        </script>
+	</body>
+</html>

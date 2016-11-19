@@ -1,0 +1,271 @@
+/*************************************************************************************************/
+/*************************************************************************************************/
+/* Essential CSS - leave alone. Some relevant divs can be altered further down if needed */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+#panel {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+}
+
+#background {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 0 !important;
+  background-color      : #ffffff; /* #221005; */
+  overflow: hidden;
+}
+
+#panelContainer {
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  overflow: hidden !important;
+}
+
+#panelCreative {
+  position: relative;
+}
+
+#hiddenContainer {
+  display: none;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  pointer-events: none;
+  cursor: none;
+}
+#barometer {
+  background-image: url("../images/barometer.png");
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 388px;
+  height: 389px;
+  background-repeat:no-repeat;
+  background-size: contain;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+}
+#frame2heading {
+  background-image: url("../images/frame-2-uk.png");
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%,-50%);
+  width: 688px;
+  height: 117px;
+  background-repeat:no-repeat;
+  background-size: contain;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+}
+#logo {
+  background-image: url("../images/logo.png");
+  position: absolute;
+  left: 970px;
+  bottom: 30px;
+  width: 249px;
+  height: 91px;
+  background-repeat:no-repeat;
+  background-size: contain;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+}
+
+#t1 {
+  background-image: url("../images/hero-text.png");
+  position: absolute;
+  width: 781px;
+  height: 196px;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%,-50%);
+  background-repeat:no-repeat;
+  background-position:right;
+  background-size: contain;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+  opacity: 0;
+}
+
+#t2 {
+  background-image: url("../images/ehl.png");
+  position: absolute;
+  left: 80px;
+  bottom: 50px;
+  width: 224px;
+  height: 30px;
+  background-repeat:no-repeat;
+  background-position:right;
+  background-size: contain;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+  opacity: 0;
+}
+
+#legal {
+  background-image: url("../images/footer.png");
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%,-50%);
+  width: 185px;
+  height: 22px;
+  background-repeat:no-repeat;
+  background-position:right;
+  background-size: contain;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+}
+.letterShadow{
+  -webkit-filter: drop-shadow(0px 2px 8px rgba(0,0,0,0.12));
+  filter: drop-shadow(0px 2px 8px rgba(0,0,0,0.12));
+}
+
+#cta {
+  background-image: url("../images/cta.png");
+  background-repeat:no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-50%);
+  width: 208px;
+  height: 65px;
+  background-size: contain;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+  opacity: 0;
+}
+#cta:hover{
+  background-image: url("../images/cta-hover.png");
+}
+/*************************************************************************************************/
+/*************************************************************************************************/
+
+/*************************************************************************************************/
+/*************************************************************************************************/
+/* Useful classes */
+
+.hidden {
+  opacity: 0;
+}
+
+.full {
+  position: absolute;
+  width: 1270ox;
+  height: 750px;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.unrounded {
+  border-radius: 0px;
+}
+
+.threeD {
+  -webkit-transform: translateZ(0.1);
+
+  -webkit-transform-style: preserve-3d;
+
+}
+
+.shadowed {
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,Color='#444')";
+  filter: url(#drop-shadow);
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.75));
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.75));
+}
+
+/*************************************************************************************************/
+/*************************************************************************************************/
+
+/*************************************************************************************************/
+/*************************************************************************************************/
+/* Expand CSS */
+/*#background {
+  background: red;
+}*/
+
+#panelContainer {
+  width: 1270px;
+  height: 750px;
+}
+
+#closeButton {
+  position: absolute;
+  right: 27px;
+  top: 27px;
+  width: 37px;
+  height: 37px;
+  background-repeat: no-repeat;
+  background-size: 115px 100px;
+  overflow: hidden;
+  z-index: 5001;
+  background-image: url(../images/close.png);
+  background-size: contain;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+}
+
+#unitBackground, #preBackground, #initialBackground, #preBackgroundClouds {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1270px;
+  height: 750px;
+  background-repeat: no-repeat;
+  background-size: 1270px 750px;
+  overflow: hidden;
+}
+#unitBackground{
+  background-image: url(../images/bg.png);
+}
+#preBackground, #initialBackground {
+  background-image: url(../images/bg-pre.png);
+}
+#preBackgroundClouds {
+  background-image: url(../images/bg-clouds.png);
+}
